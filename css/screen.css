@@ -18,9 +18,42 @@ ul, ol { list-style-type: none; }
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) { * { -webkit-text-size-adjust: none; } }
 table { border-spacing: 0; border-collapse: collapse; width: 100%; }
 
+@font-face { font-family: SegoeUI; src: url("fonts/SegoeUI.eot"); src: url("fonts/SegoeUI.eot?#iefix") format("embedded-opentype"), url("fonts/SegoeUI.woff") format("woff"), url("fonts/SegoeUI.ttf") format("truetype"); font-weight: normal; font-style: normal; }
+@font-face { font-family: SegoeUI-Light; src: url("fonts/SegoeUI-Light.eot"); src: url("fonts/SegoeUI-Light.eot?#iefix") format("embedded-opentype"), url("fonts/SegoeUI-Light.woff") format("woff"), url("fonts/SegoeUI-Light.ttf") format("truetype"); font-weight: normal; font-style: normal; }
+@font-face { font-family: Ubuntu-Light; src: url("fonts/Ubuntu-Light.eot"); src: url("fonts/Ubuntu-Light.eot?#iefix") format("embedded-opentype"), url("fonts/Ubuntu-Light.woff") format("woff"), url("fonts/Ubuntu-Light.ttf") format("truetype"); font-weight: normal; font-style: normal; }
+@font-face { font-family: Ubuntu-Bold; src: url("fonts/Ubuntu-Bold.eot"); src: url("fonts/Ubuntu-Bold.eot?#iefix") format("embedded-opentype"), url("fonts/Ubuntu-Bold.woff") format("woff"), url("fonts/Ubuntu-Bold.ttf") format("truetype"); font-weight: normal; font-style: normal; }
 body { font-family: Arial, sans-serif; font-size: 12px; line-height: 1.4; }
+
+a { text-decoration: none; color: inherit; }
 
 .l { *zoom: 1; }
 .l:after { content: " "; display: table; clear: both; }
 .l .l-col1 { float: left; width: 20%; }
 .l .l-col2 { float: right; width: 70%; }
+
+.header { background: #242424; *zoom: 1; }
+.header:after { content: " "; display: table; clear: both; }
+
+.logo { display: block; float: left; position: relative; width: 385px; height: 85px; line-height: 85px; text-align: center; overflow: hidden; }
+.logo:before { content: ""; position: absolute; z-index: 1; top: 0; right: 38px; bottom: 0; width: 100%; background: #00853f; -moz-transform: skewX(-41.02deg); -ms-transform: skewX(-41.02deg); -webkit-transform: skewX(-41.02deg); transform: skewX(-41.02deg); }
+.logo i { display: inline-block; vertical-align: middle; position: relative; z-index: 2; top: -8px; font: 0/0 a; text-shadow: none; color: transparent; background: url("../img/svg/logo.svg") no-repeat 0 0; -moz-background-size: 162px 48px 100%; -webkit-background-size: 162px 48px 100%; background-size: 162px 48px 100%; width: 162px; height: 48px; display: inline-block; }
+
+.header__nav { float: left; position: relative; padding-left: 83px; }
+
+.header__nav-list { font-size: 0; }
+.header__nav-list li { display: inline-block; vertical-align: middle; margin-left: 50px; }
+.header__nav-list li:first-child { margin-left: 0; }
+.header__nav-list li.is-active a { color: #FFF; }
+.header__nav-list li.is-active a:before { width: 100%; }
+.header__nav-list li a { display: block; position: relative; padding: 0 15px; line-height: 85px; color: #878787; font-family: Ubuntu-Light, sans-serif; font-size: 18px; -moz-transition: color 0.2s linear; -o-transition: color 0.2s linear; -webkit-transition: color 0.2s linear; transition: color 0.2s linear; }
+.header__nav-list li a:hover { color: #FFF; }
+.header__nav-list li a:hover:before { width: 100%; }
+.header__nav-list li a:before { content: ""; position: absolute; bottom: 0; left: 0; width: 0; height: 5px; background: #00853f; -moz-transition: all 0.2s linear; -o-transition: all 0.2s linear; -webkit-transition: all 0.2s linear; transition: all 0.2s linear; }
+.header__nav-list li.is-active { color: #FFF; }
+
+.header__right { float: right; }
+
+.header__lang { position: absolute; top: 0; left: 0; padding: 0 7px; background: #111; font-size: 0; }
+.header__lang:before { content: ""; position: absolute; z-index: 1; top: 0; left: -11px; bottom: 0; right: -11px; background: #111; -moz-transform: skewX(-41.02deg); -ms-transform: skewX(-41.02deg); -webkit-transform: skewX(-41.02deg); transform: skewX(-41.02deg); }
+.header__lang a { display: inline-block; position: relative; z-index: 2; padding: 0 6px; color: #494949; font-family: SegoeUI, sans-serif; font-size: 11px; line-height: 23px; }
+.header__lang a.is-active { color: #747474; }

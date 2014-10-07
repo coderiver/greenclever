@@ -1,216 +1,125 @@
-// Normally mainpage styles
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+//------------------------------------------------------------------------------
+//
+//    #blocks
+//
+//------------------------------------------------------------------------------
+
+
+
+
+
+
+//------------------------------------------------------------------------------
+//
+//    #header
+//
+//------------------------------------------------------------------------------
+
+.header
+	background: $header
+	+clr
+
+.logo
+	display: block
+	float: left
+	position: relative
+	width: 385px
+	height: 85px
+	line-height: 85px
+	text-align: center
+	overflow: hidden
+	&:before
+		content: ""
+		position: absolute
+		z-index: 1
+		top: 0
+		right: 38px
+		bottom: 0
+		width: 100%
+		background: $green
+		+skew
+	i
+		display: inline-block
+		vertical-align: middle
+		position: relative
+		z-index: 2
+		top: -8px
+		+hide-text
+		+svg(logo, 162, 48)
+
+.header__nav
+	float: left
+	position: relative
+	padding-left: 83px
+
+.header__nav-list
+	font-size: 0
+	li
+		display: inline-block
+		vertical-align: middle
+		margin-left: 50px
+		&:first-child
+			margin-left: 0
+		&.is-active
+			a
+				color: #FFF
+				&:before
+					width: 100%
+		a
+			display: block
+			position: relative
+			padding: 0 15px
+			line-height: 85px
+			color: #878787
+			+ubuntu-l
+			font-size: 18px
+			+tr-color
+			&:hover
+				color: #FFF
+				&:before
+					width: 100%
+			&:before
+				content: ""
+				position: absolute
+				bottom: 0
+				left: 0
+				width: 0
+				height: 5px
+				background: $green
+				+tr-all
+		&.is-active
+			color: #FFF
+
+.header__right
+	float: right
+
+
+.header__lang
+	position: absolute
+	top: 0
+	left: 0
+	padding: 0 7px
+	background: #111
+	font-size: 0
+	&:before
+		content: ""
+		position: absolute
+		z-index: 1
+		top: 0
+		left: -11px
+		bottom: 0
+		right: -11px
+		background: #111
+		+skew
+	a
+		display: inline-block
+		position: relative
+		z-index: 2
+		padding:  0 6px
+		color: #494949
+		+segoe
+		font-size: 11px
+		line-height: 23px
+		&.is-active
+			color: #747474
 
