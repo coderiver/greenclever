@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<title>GreenClever</title>
-	<meta name="viewport" content="initial-scale=1"/>
+	<meta name="viewport" content="width=1200"/>
 	<!-- <meta name="viewport" content="width=1200"> -->
 	<link rel="stylesheet" media="all" href="css/screen.css" >
 	<!--[if IE]><script src="js/html5shiv.js"></script><![endif]-->
@@ -12,6 +12,10 @@
 <!-- BEGIN header -->
 <div class="header">
 	<a href="#" class="logo"><i>GreenClever</i></a>
+	<div class="header__right">
+		<a href="#" class="btn"><span>Техническая поддержка</span></a>
+		<a href="tel:+7(499)394-34-07" class="header__tel"><i class="ico ico_tel-circle"></i>+7(499)394-34-07</a>
+	</div>
 	<nav class="header__nav">
 		<div class="header__lang">
 			<a class="is-active" href="#">Рус</a>
@@ -25,21 +29,99 @@
 			<li><a href="#">Контакты</a></li>
 		</ul>
 	</nav>
-	<div class="header__right">
-		<a href="#" class="button">Техническая поддержка</a>
-		<a href="tel:+7(499)394-34-07" class="header__tel">+7(499)394-34-07</a>
-	</div>
-
 </div>
 <!-- END header -->
 
 <!-- BEGIN main -->
-<div id="fullpage">
+<div id="fullpage" class="out">
 	<!-- BEGIN section 1 -->
 	<div class="section">
-
+		<div class="container" style="background-image: url(img/slide1.jpg)">
+			<div class="container__in">
+				<div class="content">
+					<h1 class="title title_lead">Хорошие сайты<br> на простом языке</h1>
+					<p class="lead-text">Мы поняли, что главная потребность владельцев сайтов, - качественная разработка и техническая поддержка, а также грамотные программные решения, т.к. без этого их сайты просто не могут нормально существовать и развиваться, из-за чего страдает бизнес и гаснут идеи.</p>
+					<a href="#" class="btn btn_filled">Поехали!</a>
+				</div>
+			</div>
+		</div>
 	</div>
 	<!-- END section 1 -->
+	<!-- BEGIN section 2 -->
+	<div class="section">
+		<div class="container" style="background-image: url(img/slide2.jpg)">
+			<div class="container__in">
+				<div class="content">
+					<h2 class="title title_lead">Для нас важен любой клиент</h2>
+					<p class="lead-text lead-text_has-back">
+						Мы одинаково хорошо взаимодействуем как с творческими людьми, малым бизнесом, начинающими предпринимателями, так и с государственными структурами и крупными компаниями.<br>
+						<a href="#" class="btn btn_filled">Получить консультацию</a>
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- END section 2 -->
+
+	<!-- BEGIN section 3 -->
+	<div class="section">
+		<div class="container container_last" style="background-image: url(img/slide3.jpg)">
+			<div class="container__in">
+				<div class="content">
+					<h2 class="title title_lead">Мы создали более 50 хороших сайтов</h2>
+					<p class="lead-text">Продолжаем поддерживать отличные отношения со всеми нашими клиентами, помогая им закрывать потребности в веб-разработках.</p>
+
+					<!-- BEGIN carousel -->
+					<div class="carousel-wrap">
+						<div class="carousel cycle-slideshow"
+												data-cycle-fx="carousel"
+												data-cycle-timeout="1"
+												data-cycle-speed="8000"
+												data-cycle-slides=".carousel__item"
+												data-cycle-easing="linear"
+												>
+							<a class="carousel__item fancybox" rel="group" href="img/work1.jpg"><img src="img/work1.jpg" alt=""></a>
+							<a class="carousel__item fancybox" rel="group" href="img/work2.jpg"><img src="img/work2.jpg" alt=""></a>
+							<a class="carousel__item fancybox" rel="group" href="img/work3.jpg"><img src="img/work3.jpg" alt=""></a>
+							<a class="carousel__item fancybox" rel="group" href="img/work4.jpg"><img src="img/work4.jpg" alt=""></a>
+							<a class="carousel__item fancybox" rel="group" href="img/work5.jpg"><img src="img/work5.jpg" alt=""></a>
+							<a class="carousel__item fancybox" rel="group" href="img/work5.jpg"><img src="img/work5.jpg" alt=""></a>
+							<a class="carousel__item fancybox" rel="group" href="img/work5.jpg"><img src="img/work5.jpg" alt=""></a>
+							<a class="carousel__item fancybox" rel="group" href="img/work6.jpg"><img src="img/work6.jpg" alt=""></a>
+							<a class="carousel__item fancybox" rel="group" href="img/work3.jpg"><img src="img/work3.jpg" alt=""></a>
+							<a class="carousel__item fancybox" rel="group" href="img/work4.jpg"><img src="img/work4.jpg" alt=""></a>
+						</div>
+					</div>
+					<!-- END carousel -->
+
+					<a href="#" class="btn btn_filled">Оставить заявку</a>
+				</div>
+				<!-- BEGIN footer -->
+				<footer class="footer">
+					<div class="footer__left"><i class="ico ico_logo"></i></div>
+					<div class="footer__right"><p class="footer__copy">© 2014 GreenClever</p></div>
+					<div class="footer__center">
+						<ul class="contacts">
+							<li class="contacts__item">
+								<span class="contacts__label">Звони нам:</span>
+								<a href="tel:+74993943407"><i class="ico ico_tel"></i>+7(499)394-34-07</a>
+							</li>
+							<li class="contacts__item">
+								<span class="contacts__label">Пиши нам:</span>
+								<a href="mailto:support@greenclever.ru"><i class="ico ico_mail"></i>support@greenclever.ru</a>
+							</li>
+							<li class="contacts__item">
+								<span class="contacts__label">Лайкай нас на Facebook:</span>
+								<a href="mailto:support@greenclever.ru"><i class="ico ico_like"></i>Facebook.com/greenclaver</a>
+							</li>
+						</ul>
+					</div>
+				</footer>
+				<!-- END footer -->
+			</div>
+		</div>
+	</div>
+	<!-- END section 3 -->
 </div>
 <!-- END main -->
 

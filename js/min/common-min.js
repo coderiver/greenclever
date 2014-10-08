@@ -8,3 +8,4 @@ head.ready(function() {
 
     $(".fancybox").fancybox();
 });
+
