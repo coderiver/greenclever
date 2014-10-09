@@ -71,8 +71,12 @@
 	&_tel-circle
 		border: 2px solid #fff
 		border-radius: 50%
-		padding: 4px 6px
-		display: inline
+		display: inline-block
+		vertical-align: middle
+		height: 31px
+		width: 31px
+		line-height: 31px
+		text-align: center
 		+transition(border-color 0.2s linear)
 		&:before
 			content: '\e801'
@@ -88,6 +92,17 @@
 	&_logo
 		&:before
 			content: '\e800'
+	&_calendar
+		&:before
+			content: '\e806'
+	&_timer
+		&:before
+			content: '\e807'
+
+@each $item in hdd, server, cloud, gamepad
+	.icon-#{$item}
+		display: inline-block
+		+s(#{$item})
 
 .title
 	+ubuntu-b
@@ -112,7 +127,7 @@
 		padding: 50px 40px 40px
 		background: rgba(255,255,255,0.9)
 		border-radius: 5px
-		color: #58595B
+		color: $text
 		&:after
 			content: ""
 			position: absolute
@@ -140,6 +155,8 @@
 .header
 	position: fixed
 	z-index: 1000
+	min-width: 1150px
+	height: 85px
 	top: 0
 	left: 0
 	right: 0
@@ -188,6 +205,7 @@
 
 .header__nav-list
 	font-size: 0
+	white-space: nowrap
 	li
 		display: inline-block
 		vertical-align: middle
@@ -313,6 +331,8 @@
 	+segoe
 	color: #818081
 	+clr
+	&.is-static
+		position: static
 
 .footer__right
 	float: right
@@ -392,5 +412,355 @@
 		display: block
 		width: 100%
 		max-width: 100%
+
+.info
+	margin-top: 70px
+	+clr
+	&__arrow
+		position: relative
+		display: block
+		width: 100%
+		height: 2px
+		&:before, &:after
+			content: ""
+			position: absolute
+			top: 0
+			height: 2px
+			background: rgba(61,165,73,0.7)
+		&:before
+			left: 0
+			right: 50%
+			margin-right: 20px
+		&:after
+			left: 50%
+			right: 0
+			margin-left: 20px
+		i
+			display: block
+			position: absolute
+			bottom: 0
+			left: 50%
+			width: 42px
+			height: 18px
+			margin-left: -21px
+			&:before, &:after
+				content: ""
+				position: absolute
+				bottom: 0
+				width: 27px
+				height: 2px
+				background: rgba(61,165,73,0.7)
+			&:before
+				left: 0
+				+transform(rotate(-40deg))
+				-webkit-transform-origin: 0 0
+				-moz-transform-origin: 0 0
+				-ms-transform-origin: 0 0
+				-o-transform-origin: 0 0
+				transform-origin: 0 0
+			&:after
+				right: 0
+				+transform(rotate(40deg))
+				-webkit-transform-origin: 100% 0
+				-moz-transform-origin: 100% 0
+				-ms-transform-origin: 100% 0
+				-o-transform-origin: 100% 0
+				transform-origin: 100% 0
+
+	&__left
+		float: left
+		width: 50%
+		padding-right: 30px
+		text-align: right
+		box-sizing: border-box
+	&__right
+		float: right
+		width: 50%
+		padding-left: 30px
+		text-align: left
+		box-sizing: border-box
+	&__item
+		display: inline-block
+		vertical-align: middle
+		// width: 400px
+		margin-top: 20px
+		color: $green2
+		font-size: 17px
+		text-align: left
+		line-height: 1.2
+		+clr
+		.ico
+			float: left
+			font-size: 33px
+		span
+			display: block
+			margin-left: 50px
+			+segoe
+
+.content-wrap
+	margin-top: 85px
+	text-align: center
+
+.toparea
+	-webkit-background-size: cover
+	-o-background-size: cover
+	background-size: cover
+	background-position: 50% 50%
+	text-align: center
+	overflow: hidden
+	&__in
+		position: relative
+		padding: 94px 0
+		max-width: 1920px
+		margin: 0 auto
+	.lead-text
+		position: relative
+		z-index: 2
+		max-width: 650px
+		margin: 0 auto
+		font-size: 30px
+		line-height: 1.3
+		+r(1500)
+			text-shadow: 0 0 20px #000
+	&_only-text
+		padding: 110px 0 140px
+		.lead-text
+			max-width: none
+			font-size: 36px
+			line-height: 1.3
+			+ubuntu-b
+
+.laptop
+	position: absolute
+	z-index: 1
+	+s(laptop)
+	left: percentage(140/1920)
+	bottom: 0
+	+r(1600)
+		left: percentage(-50/1500)
+
+.devices
+	+s(devices)
+	position: absolute
+	z-index: 1
+	right: percentage(-50/1920)
+	bottom: 0
+	+r(1600)
+		right: percentage(-180/1500)
+
+.number
+	display: block
+	margin: 0 auto 40px
+	width: 40px
+	height: 40px
+	border-radius: 50%
+	border: 2px solid $green
+	font-size: 23px
+	text-align: center
+	+ubuntu-l
+	line-height: 40px
+	color: $green
+
+.bottomarea
+	margin-top: 70px
+	padding: 50px 0 95px
+	background: #d8eddb
+	text-align: center
+	&__text
+		text-align: center
+		color: $green2
+		font-size: 20px
+		line-height: 1.35
+	.btn
+		margin: 50px 0 0
+
+%tech-block
+	position: relative
+	overflow: hidden
+	z-index: 1
+
+.tech-block1
+	@extend %tech-block
+	padding: 40px 0 0
+	+blue-border
+	border-width: 0 3px 0 0
+	.tech
+		margin-left: 187px
+		margin-right: 125px
+	.corner.bottom-left
+		top: 0
+		left: 0
+		height: 162px
+		width: 200px
+
+	.corner.top-left
+		top: 170px
+		left: 120px
+		height: 100px
+		width: 100px
+
+.tech-block2
+	@extend %tech-block
+	padding: 40px 0 100px 0
+	margin-left: 120px
+	+blue-border
+	border-width: 0 3px 0 3px
+
+.tech-block3
+	@extend %tech-block
+	.corner.bottom-right
+		top: 0
+		right: 0
+		height: 151px
+		width: 130px
+	.corner.bottom-left
+		top: 0
+		left: 120px
+		height: 90px
+		width: 30px
+	.corner.top-right
+		top: 87px
+		left: 150px
+		width: 58px
+		height: 100%
+
+.tech-block4
+	@extend %tech-block
+	padding: 40px 0 50px
+	+blue-border
+	border-width: 0 0 0 3px
+	margin-left: 205px
+	.tech-about
+		padding-right: 120px
+		margin-right: 125px
+		text-align: center
+		&:before
+			left: 36%
+
+.tech-block5
+	@extend %tech-block
+	padding-right: 125px
+	.tech
+		margin-left: 127px
+	.tech__text
+		margin-left: 208px
+	.icon-gamepad
+		position: relative
+		top: -25px
+		&:before
+			content: ""
+			position: absolute
+			top: -95px
+			left: 50%
+			margin-left: -2px
+			width: 0
+			height: 100px
+			+blue-border
+			border-width: 0 0 0 3px
+	.tech-about
+		margin-left: 330px
+
+.corner
+	position: absolute
+	z-index: 1
+	width: 50px
+	height: 50px
+	box-sizing: border-box
+	+blue-border
+	&.bottom-left
+		border-width: 0 0 3px 3px
+		border-bottom-left-radius: 20px
+	&.top-left
+		border-width: 3px 0 0 3px
+		border-top-left-radius: 20px
+	&.top-right
+		border-width: 3px 3px 0 0
+		border-top-right-radius: 20px
+	&.bottom-right
+		border-width: 0 3px 3px 0
+		border-bottom-right-radius: 20px
+
+.tech
+	text-align: left
+	white-space: nowrap
+	+clr
+	&__pic
+		float: left
+		position: relative
+		z-index: 2
+		&.icon-hdd
+			position: relative
+			top: -18px
+	&__text
+		// max-width: 600px
+		margin-left: 145px
+		font-size: 16px
+		line-height: 1.4
+		white-space: normal
+		+ptsans
+		color: $text
+	&_text-right
+		text-align: right
+		margin-right: 125px
+		.tech__pic
+			float: right
+			.icon-server
+				position: relative
+				top: -5px
+			.icon-cloud
+				position: absolute
+				z-index: -1
+				top: -80px
+				right: -100px
+		.tech__text
+			max-width: none
+			margin-left: 285px
+			margin-right: 200px
+
+.tech-about
+	+clr
+	position: relative
+	padding: 40px 65px
+	background: #F2F2F2
+	text-align: left
+	+ptsans
+	font-size: 15px
+	line-height: 1.4
+	color: $text
+	&:before
+		content: ""
+		position: absolute
+		z-index: 2
+		bottom: 100%
+		left: 41%
+		width: 0
+		height: 0
+		border: 0 solid transparent
+		border-width: 0 23px 17px 23px
+		border-bottom-color: #F2F2F2
+	&__left
+		float: left
+		width: 130px
+		font-size: 13px
+		line-height: 1.42
+		+ptsans-b
+		font-weight: bold
+		text-transform: uppercase
+		color: $green2
+	&__list
+		margin-left: 150px
+		li
+			position: relative
+			padding-left: 30px
+			margin-top: 30px
+			&:first-child
+				margin-top: 0
+			&:before
+				@extend .ico:before
+				position: absolute
+				top: 1px
+				left: 0
+				content: '\e804'
+				color: $green2
 
 

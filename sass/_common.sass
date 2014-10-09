@@ -50,6 +50,7 @@
 $header: #242424
 $green: #00853f
 $green2: #3da549
+$text: #58595b
 
 $res: 1300
 
@@ -58,6 +59,9 @@ $res: 1300
 +font(Ubuntu-Light, Ubuntu-Light)
 +font(Ubuntu-Bold, Ubuntu-Bold)
 +font(fontello, fontello)
++font(PTSans-Regular, PTSans-Regular)
++font(PTSans-Bold, PTSans-Bold)
+
 
 =segoe
 	font-family: SegoeUI, sans-serif
@@ -73,6 +77,11 @@ $res: 1300
 	font-style: normal
 	font-weight: normal
 	speak: none
+=ptsans
+	font-family: PTSans-Regular, sans-serif
+	font-weight: normal
+=ptsans-b
+	font-family: PTSans-Bold, sans-serif
 
 =skew
 	+transform(skewX(-41.02deg))
@@ -83,10 +92,14 @@ $res: 1300
 =tr-color
 	+transition(color 0.2s linear)
 
+=blue-border
+	border: 0px solid #a3cfed
+
 body
 	font-family: Arial, sans-serif
 	font-size: 12px
 	line-height: 1.4
+	color: $text
 
 
 // common blocks
@@ -95,7 +108,7 @@ a
 	color: inherit
 
 .out
-	min-width: 1200px
+	min-width: 1150px
 
 .container
 	display: table
@@ -129,9 +142,9 @@ a
 				bottom: 0
 				background: rgba(62,62,62,0.76)
 		.title
-			color: #58595b
+			color: $text
 		.lead-text
-			color: #58595B
+			color: $text
 			max-width: 850px
 		.content
 			display: block

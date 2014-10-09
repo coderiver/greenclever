@@ -4,8 +4,11 @@ head.ready(function() {
 	// 	$(".js-popup").hide();
 	// });
 
-    $('#fullpage').fullpage();
-
     $(".fancybox").fancybox();
+
+    var fullpage_el = $('#fullpage');
+    if (fullpage_el.length) {
+    	$('#fullpage').fullpage();
+    };
 });
 
