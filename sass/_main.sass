@@ -72,6 +72,9 @@
 			content: '\e802'
 			position: relative
 			top: 1px
+	&_views
+		&:before
+			content: '\e803'
 	&_like
 		&:before
 			content: '\e808'
@@ -425,6 +428,13 @@
 	+clr
 	&.is-static
 		position: static
+	&.is-fixed
+		position: fixed
+		bottom: 0
+		left: 0
+		right: 0
+		top: auto
+		min-width: 1150px
 
 .footer__right
 	float: right
@@ -521,13 +531,89 @@
 		background: rgba(0,0,0,0.28)
 		.btn
 			border-color: transparent
-			margin: 0 10px
+			margin: 0 15px
 			&.is-active
 				background: $green
 				color: #FFF
 			&:hover
 				color: #FFF
+	&__main
+		+clr
 
+.work
+	float: left
+	width: percentage(384/1920)
+	padding-bottom: percentage(290/1920)
+	box-sizing: border-box
+	text-align: left
+	font-size: 13px
+	+segoe
+	position: relative
+	color: #FFF
+	-webkit-background-size: cover
+	-o-background-size: cover
+	background-size: cover
+	background-repeat: no-repeat
+	overflow: hidden
+	img
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		z-index: 1
+	&__hover
+		opacity: 0
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		z-index: 2
+		padding: 0 30px
+		background: rgba(0,133,65,0.78)
+		+transform(translateY(100%))
+		+tr-all
+	&__title
+		display: block
+		margin-top: percentage(70/290)
+		font-size: 25px
+		line-height: 1.2
+		+segoe-b
+		+r(1500)
+			font-size: 22px
+	&__client
+		display: block
+		margin-top: 10px
+		em
+			font-size: 18px
+			font-style: normal
+			font-weight: normal
+			margin-left: 7px
+			position: relative
+			top: 1px
+	&__views
+		position: absolute
+		bottom: 23px
+		left: 30px
+		i
+			font-style: normal
+			font-weight: normal
+		.ico
+			&:before
+				margin: 0 7px 0 10px
+				font-size: 11px
+	&__views-item
+		margin-left: 25px
+		&:first-child
+			margin-left: 0
+	&:hover
+		.work__hover
+			opacity: 1
+			+transform(translateY(0))
+	+r(1600)
+		width: percentage(400/1600)
+		padding-bottom: percentage(302/1600)
 
 
 
@@ -649,9 +735,11 @@
 	margin-top: 85px
 	text-align: center
 	overflow: hidden
+	&_fixed-footer
+		margin-bottom: 100px
 
 .toparea
-	background-image: url('../ img/toparea.png')
+	background-image: url('../img/toparea.png')
 	-webkit-background-size: cover
 	-o-background-size: cover
 	background-size: cover
