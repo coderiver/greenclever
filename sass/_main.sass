@@ -21,22 +21,6 @@
 	span
 		position: relative
 		z-index: 2
-	// &:before
-	// 	content: ""
-	// 	position: absolute
-	// 	z-index: 1
-	// 	top: 0
-	// 	left: 0
-	// 	right: 100%
-	// 	bottom: 0
-	// 	background: $green
-	// 	opacity: 0
-	// 	+tr-all
-	// &:hover
-	// 	color: #fff
-	// 	&:before
-	// 		right: 0
-	// 		opacity: 1
 	&:hover
 		background: $green
 		color: #FFF
@@ -56,7 +40,7 @@
 	color: inherit
 	display: inline-block
 	&:before
-		+fontello
+		+icons-font
 		text-decoration: inherit
 		width: 1em
 		// margin-right: 0.2em
@@ -86,6 +70,8 @@
 	&_mail
 		&:before
 			content: '\e802'
+			position: relative
+			top: 1px
 	&_like
 		&:before
 			content: '\e808'
@@ -98,20 +84,53 @@
 	&_timer
 		&:before
 			content: '\e807'
+	&_dev
+		&:before
+			content: '\e805'
+			color: #1480c1
+	&_support
+		&:before
+			content: '\e809'
+			color: #25c1f2
+	&_settings
+		&:before
+			content: '\e80a'
+			color: #A6267C
+	&_advice
+		&:before
+			content: '\e80b'
+			color: #F15B26
+	&_analysis
+		&:before
+			content: '\e80c'
+			color: #8dc642
+	&_training
+		&:before
+			content: '\e80d'
+			color: #13BBC6
 
 @each $item in hdd, server, cloud, gamepad
 	.icon-#{$item}
 		display: inline-block
 		+s(#{$item})
 
+@each $s in communication, openness, quality
+	.icon-#{$s}
+		+svg(#{$s}, 120, 120)
+
 .title
 	+ubuntu-b
+	font-size: 21px
 	&_lead
 		max-width: 800px
 		margin: 0 auto
 		text-align: center
 		font-size: 78px
 		line-height: 1
+		color: #FFF
+	&_big
+		font-size: 36px
+		line-height: 1.3
 		color: #FFF
 
 .lead-text
@@ -142,6 +161,79 @@
 	.btn
 		margin-top: 50px
 
+.quote
+	position: relative
+	padding: 10px 0 0 46px
+	max-width: 730px
+	margin: 0 auto
+	box-sizing: border-box
+	text-align: left
+	+segoe-bi
+	font-size: 16px
+	color: $text
+	&:before
+		content: ""
+		position: absolute
+		top: 0
+		left: 0
+		+s(quote)
+	& + .info-text
+		margin-top: 130px
+
+.info-text
+	+segoe
+	font-size: 16px
+	color: $text
+	text-align: center
+	line-height: 1.4
+	&__arrow
+		display: block
+		margin: 17px auto 5px
+		+s(decor-arrow)
+	a
+		color: $green
+		text-decoration: underline
+		&:hover
+			text-decoration: none
+
+.contact-item
+	display: inline-block
+	vertical-align: middle
+	+segoe-l
+	font-size: 30px
+	.ico
+		color: #1B5494
+		margin-right: 5px
+	.ico_mail
+		margin-right: 10px
+
+.b-input
+	display: block
+	text-align: left
+	span
+		display: block
+		margin-bottom: 7px
+		+ubuntu
+		font-size: 14px
+		line-height: 1
+	input[type="text"], textarea
+		display: block
+		padding: 0 10px
+		width: 100%
+		box-sizing: border-box
+		background: #FFF
+		border: 1px solid #CCD1D5
+		box-shadow: 0 0 1px 0 #CCD1D5
+		border-radius: 3px
+		font-size: 16px
+		line-height: 1.3
+		+segoe
+	input[type="text"]
+		height: 30px
+	textarea
+		padding: 5px 10px
+	& + &
+		margin-top: 19px
 
 
 
@@ -211,7 +303,7 @@
 		vertical-align: middle
 		margin-left: 50px
 		+r(1800)
-			margin-left: 10px
+			margin-left: 5px
 		&:first-child
 			margin-left: 0
 		&.is-active
@@ -255,12 +347,11 @@
 		display: inline-block
 		vertical-align: middle
 		margin-right: 35px
-
 	+r(1600)
 		padding-right: 15px
 		.btn
-			margin-right: 15px
-	+r(1350)
+			margin-right: 10px
+	+r(1330)
 		.btn
 			display: none
 
@@ -271,6 +362,7 @@
 	color: #FFF
 	+ubuntu-l
 	font-size: 18px
+	line-height: 31px
 	+tr-color
 	.ico
 		margin-right: 10px
@@ -379,6 +471,62 @@
 		line-height: 1
 		text-transform: uppercase
 		color: $green2
+
+
+
+
+
+
+//------------------------------------------------------------------------------
+//
+//    #gallery
+//
+//------------------------------------------------------------------------------
+
+.gallery
+	&__header
+		position: relative
+		padding: 65px 0 0
+		background-image: url('../img/slide3.jpg')
+		background-position: 50% 93%
+		color: #BFBFBF
+		&:before
+			content: ""
+			position: absolute
+			z-index: 0
+			top: 0
+			left: 0
+			right: 0
+			bottom: 0
+			background: rgba(62,62,62,0.76)
+	&__header-in
+		position: relative
+		z-index: 2
+	&__promo-text
+		max-width: 770px
+		margin: 20px auto 30px
+	&__sort
+		display: inline-block
+		margin: 20px
+		&:hover
+			color: #fff
+		&:after
+			@extend .ico:before
+			display: inline-block
+			vertical-align: middle
+			margin-left: 5px
+			content: "\e80e"
+	&__sort-more
+		padding: 25px 0
+		background: rgba(0,0,0,0.28)
+		.btn
+			border-color: transparent
+			margin: 0 10px
+			&.is-active
+				background: $green
+				color: #FFF
+			&:hover
+				color: #FFF
 
 
 
@@ -500,8 +648,10 @@
 .content-wrap
 	margin-top: 85px
 	text-align: center
+	overflow: hidden
 
 .toparea
+	background-image: url('../ img/toparea.png')
 	-webkit-background-size: cover
 	-o-background-size: cover
 	background-size: cover
@@ -524,11 +674,13 @@
 			text-shadow: 0 0 20px #000
 	&_only-text
 		padding: 110px 0 140px
+		background-image: url('../img/toparea2.jpg')
 		.lead-text
 			max-width: none
 			font-size: 36px
 			line-height: 1.3
 			+ubuntu-b
+			text-shadow: none
 
 .laptop
 	position: absolute
@@ -764,3 +916,227 @@
 				color: $green2
 
 
+.services-block1
+	position: relative
+	padding: 80px 0 100px
+	background: #FFF
+	&:after
+		content: ""
+		position: absolute
+		top: 100%
+		left: 50%
+		margin-left: -33px
+		width: 0
+		height: 0
+		border: 0px solid transparent
+		border-width: 22px 33px 0 33px
+		border-top-color: #fff
+
+.services-block2
+	padding: 65px 0 75px
+	background: #f1f1f1
+	.title
+		margin-bottom: 55px
+
+.services-block3
+	padding: 80px 0 90px
+
+.service-item
+	+clr
+	text-align: left
+	&__pic
+		float: left
+	&__text
+		margin-left:  55px
+		font-size: 16px
+		+segoe
+		line-height: 1.4
+		color: #666
+	.ico
+		font-size: 33px
+		line-height: 1
+	.ico_analysis
+		font-size: 30px
+	&_big
+		text-align: center
+		.service-item__pic
+			float: none
+		.service-item__text
+			margin-left: 0
+		.title
+			font-size: 16px
+			text-align: center
+			margin: 20px 0 15px
+
+.contacts-block1
+	position: relative
+	min-height: 720px
+	box-sizing: border-box
+	padding: 60px 0 180px
+	background-image: url('../img/contacts.jpg')
+	background-position: 50% -50px
+	background-repeat: no-repeat
+	background-color: #162a40
+	color: #BFBFBF
+	.title
+		margin-bottom: 40px
+
+.contacts-block2
+	position: relative
+	padding: 55px 100px
+	background: #e4e4e4
+	.title
+		margin-bottom: 25px
+	// &:before, &:after
+	// 	content: ""
+	// 	position: absolute
+	// 	bottom: 100%
+	// 	height: 0
+	// 	border: 1px solid rgba(0,0,0,0)
+	// 	border-width: 0 33px 25px 33px
+	// 	border-bottom-color: #e4e4e4
+	// &:before
+	// 	left: 0
+	// 	right: 50%
+	// 	border-left-color: #e4e4e4
+	// &:after
+	// 	left: 50%
+	// 	right: 0
+	// 	border-right-color: #e4e4e4
+	&:before, &:after
+		content: ""
+		position: absolute
+		z-index: 2
+		height: 25px
+		bottom: 100%
+		background: #e4e4e4
+	&:before
+		left: -20px
+		right: 50%
+		margin-right: 18px
+		+transform(skew(55deg))
+	&:after
+		left: 50%
+		right: -20px
+		margin-left: 18px
+		+transform(skew(-55deg))
+	.col
+		text-align: center
+
+.contacts-block3
+	padding: 70px 0 100px
+	text-align: center
+	.title
+		margin-bottom: 40px
+	.btn
+		min-width: 175px
+		font-size: 16px
+		margin-top: 30px
+
+.location
+	position: absolute
+	width: 26px
+	height: 26px
+	line-height: 26px
+	border: 2px solid $green
+	border-radius: 50%
+	text-align: center
+	font-size: 0
+	+transform(translateX(-50%) translateY(-50%))
+	&:before
+		content: ""
+		display: inline-block
+		vertical-align: middle
+		width: 10px
+		height: 10px
+		background: $green
+		border-radius: 50%
+	&:after
+		display: none
+		content: ""
+		position: absolute
+		top: 50%
+		left: 50%
+		width: 100%
+		height: 100%
+		padding: 10px
+		border: 1px solid $green
+		border-radius: 50%
+		+transform(translateX(-50%) translateY(-50%))
+	span
+		position: absolute
+		top: 50%
+		left: 100%
+		margin-left: 10px
+		color: $green
+		font-size: 12px
+		line-height: 1
+		+segoe-b
+		text-transform: uppercase
+		+transform(translateY(-50%))
+	&.is-active
+		&:after
+			display: block
+		span
+			margin-left: 21px
+		.location-box
+			display: block
+
+	&_moscow
+		top: 320px
+		left: 49.91%
+
+	&_london
+		top: 356px
+		left: 36.47%
+
+.location-box
+	display: none
+	position: absolute
+	width: 430px
+	top: 100%
+	left: 50%
+	margin-top: 67px
+	box-sizing: border-box
+	border: 8px solid $green
+	border-top-color: transparent
+	padding: 25px 60px 30px
+	font-size: 16px
+	line-height: 1.3
+	+transform(translateX(-50%))
+	&:before, &:after
+		content: ""
+		position: absolute
+		top: -8px
+		height: 8px
+		background: $green
+	&:before
+		left: -8px
+		right: 50%
+		margin-right: 22px
+	&:after
+		right: -8px
+		left: 50%
+		margin-left: 22px
+	&__arrow
+		position: absolute
+		left: 50%
+		top: -8px
+		height: 8px
+		width: 44px
+		margin-left: -22px
+		&:before, &:after
+			content: ""
+			position: absolute
+			bottom: 0
+			width: 32px
+			height: 8px
+			background: $green
+		&:before
+			left: 0
+			+transform(rotate(-35deg))
+			+transform-origin(0, 100%)
+		&:after
+			right: 0
+			+transform(rotate(35deg))
+			+transform-origin(100%, 100%)

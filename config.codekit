@@ -53,13 +53,13 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/img\/icons-safbdbd20e1.png": {
+	"\/img\/icons-sd2ef1fb286.png": {
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"initialSize": 0,
-		"inputAbbreviatedPath": "\/img\/icons-safbdbd20e1.png",
-		"outputAbbreviatedPath": "\/img\/icons-safbdbd20e1.png",
+		"inputAbbreviatedPath": "\/img\/icons-sd2ef1fb286.png",
+		"outputAbbreviatedPath": "\/img\/icons-sd2ef1fb286.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -93,6 +93,17 @@
 		"initialSize": 1039,
 		"inputAbbreviatedPath": "\/img\/icons\/coderiver.png",
 		"outputAbbreviatedPath": "\/img\/icons\/coderiver.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/icons\/decor-arrow.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1660,
+		"inputAbbreviatedPath": "\/img\/icons\/decor-arrow.png",
+		"outputAbbreviatedPath": "\/img\/icons\/decor-arrow.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -262,6 +273,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/img\/icons\/quote.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 407,
+		"inputAbbreviatedPath": "\/img\/icons\/quote.png",
+		"outputAbbreviatedPath": "\/img\/icons\/quote.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/img\/icons\/server.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -313,6 +335,17 @@
 		"initialSize": 14391,
 		"inputAbbreviatedPath": "\/img\/toparea.png",
 		"outputAbbreviatedPath": "\/img\/toparea.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/toparea2.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 76407,
+		"inputAbbreviatedPath": "\/img\/toparea2.jpg",
+		"outputAbbreviatedPath": "\/img\/toparea2.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -379,17 +412,6 @@
 		"initialSize": 12055,
 		"inputAbbreviatedPath": "\/img\/work6.jpg",
 		"outputAbbreviatedPath": "\/img\/work6.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/img\/Векторный-смарт-объект.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 10925,
-		"inputAbbreviatedPath": "\/img\/Векторный-смарт-объект.jpg",
-		"outputAbbreviatedPath": "\/img\/Векторный-смарт-объект.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -914,6 +936,15 @@
 		"shouldRunAutoprefixer": 0,
 		"shouldRunBless": 0,
 		"useLibsass": false
+		},
+	"\/services.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/services.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
 		},
 	"\/technology.html": {
 		"fileType": 8192,

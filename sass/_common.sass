@@ -56,9 +56,12 @@ $res: 1300
 
 +font(SegoeUI, SegoeUI)
 +font(SegoeUI-Light, SegoeUI-Light)
++font(SegoeUI-Bold, SegoeUI-Bold)
++font(SegoeUI-BoldItalic, SegoeUI-BoldItalic)
++font(Ubuntu, Ubuntu)
 +font(Ubuntu-Light, Ubuntu-Light)
 +font(Ubuntu-Bold, Ubuntu-Bold)
-+font(fontello, fontello)
++font(icons-font, icons-font)
 +font(PTSans-Regular, PTSans-Regular)
 +font(PTSans-Bold, PTSans-Bold)
 
@@ -67,13 +70,23 @@ $res: 1300
 	font-family: SegoeUI, sans-serif
 =segoe-l
 	font-family: SegoeUI-Light, sans-serif
+=segoe-b
+	font-family: SegoeUI-Bold, sans-serif
+	font-weight: normal
+=segoe-bi
+	font-family: SegoeUI-BoldItalic, sans-serif
+	font-weight: normal
+	font-style: normal
+=ubuntu
+	font-family: Ubuntu, sans-serif
+	font-weight: normal
 =ubuntu-l
 	font-family: Ubuntu-Light, sans-serif
 =ubuntu-b
 	font-family: Ubuntu-Bold, sans-serif
 	font-weight: normal
-=fontello
-	font-family: fontello
+=icons-font
+	font-family: icons-font
 	font-style: normal
 	font-weight: normal
 	speak: none
@@ -97,9 +110,10 @@ $res: 1300
 
 body
 	font-family: Arial, sans-serif
-	font-size: 12px
+	font-size: 16px
 	line-height: 1.4
 	color: $text
+	+segoe
 
 
 // common blocks
@@ -118,7 +132,12 @@ a
 	-o-background-size: cover
 	background-size: cover
 	// background-attachment: fixed
+	&_first
+		background-image: url('../img/slide1.jpg')
+	&_second
+		background-image: url('../img/slide2.jpg')
 	&_last
+		background-image: url('../img/slide3.jpg')
 		.container__in
 			position: relative
 			z-index: 1
