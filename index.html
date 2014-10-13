@@ -39,6 +39,14 @@
 		<div class="container container_first">
 			<div class="container__in">
 				<div class="content">
+					<div class="parallax">
+						<div class="figure figure1"></div>
+						<div class="figure figure2"></div>
+						<div class="figure figure3"></div>
+						<div class="figure figure4"></div>
+						<div class="figure figure5"></div>
+						<div class="figure figure6"></div>
+					</div>
 					<h1 class="title title_lead">Хорошие сайты<br> на простом языке</h1>
 					<p class="lead-text">Мы поняли, что главная потребность владельцев сайтов, - качественная разработка и техническая поддержка, а также грамотные программные решения, т.к. без этого их сайты просто не могут нормально существовать и развиваться, из-за чего страдает бизнес и гаснут идеи.</p>
 					<a href="#" class="btn btn_filled">Поехали!</a>
@@ -94,7 +102,7 @@
 					</div>
 					<!-- END carousel -->
 
-					<a href="#" class="btn btn_filled">Оставить заявку</a>
+					<a href="feedback" class="btn btn_filled js-popup-open">Оставить заявку</a>
 
 					<!-- BEGIN info -->
 					<div class="info">
@@ -144,6 +152,34 @@
 	<!-- END section 3 -->
 </div>
 <!-- END main -->
+
+<!-- BEGIN popup -->
+<div id="feedback" class="popup js-popup">
+	<div class="popup__in js-popup-content">
+		<i class="ico ico_close js-popup-close"></i>
+		<form>
+			<h3 class="title">Форма обратной связи</h3>
+			<div class="b-input">
+				<span>Представьтесь</span>
+				<input type="text">
+			</div>
+			<div class="b-input">
+				<span>Телефон</span>
+				<input type="text">
+			</div>
+			<div class="b-input">
+				<span>E-mail</span>
+				<input type="text">
+			</div>
+			<div class="b-input">
+				<span>Опишите ваши желания</span>
+				<textarea rows="8"></textarea>
+			</div>
+			<button type="submit" class="btn">Отправить</button>
+		</form>
+	</div>
+</div>
+<!-- END popup -->
 
 <!-- load scripts -->
 <script src="js/lib/head.js" data-headjs-load="js/init.js"></script>

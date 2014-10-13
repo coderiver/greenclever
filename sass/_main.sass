@@ -10,6 +10,7 @@
 	z-index: 1
 	height: 33px
 	padding: 0 15px
+	background: none
 	+ubuntu-l
 	font-size: 13px
 	line-height: 33px
@@ -111,6 +112,11 @@
 		&:before
 			content: '\e80d'
 			color: #13BBC6
+	&_close
+		&:before
+			content: '\e80f'
+
+
 
 @each $item in hdd, server, cloud, gamepad
 	.icon-#{$item}
@@ -518,6 +524,7 @@
 	&__sort
 		display: inline-block
 		margin: 20px
+		+tr-color
 		&:hover
 			color: #fff
 		&:after
@@ -527,6 +534,7 @@
 			margin-left: 5px
 			content: "\e80e"
 	&__sort-more
+		display: none
 		padding: 25px 0
 		background: rgba(0,0,0,0.28)
 		.btn
@@ -539,9 +547,12 @@
 				color: #FFF
 	&__main
 		+clr
+		font-size: 0
+		text-align: center
 
 .work
-	float: left
+	display: inline-block
+	vertical-align: top
 	width: percentage(384/1920)
 	padding-bottom: percentage(290/1920)
 	box-sizing: border-box
@@ -736,7 +747,7 @@
 	text-align: center
 	overflow: hidden
 	&_fixed-footer
-		margin-bottom: 100px
+		padding-bottom: 100px
 
 .toparea
 	background-image: url('../img/toparea.png')
@@ -1228,3 +1239,67 @@
 			right: 0
 			+transform(rotate(35deg))
 			+transform-origin(100%, 100%)
+
+
+
+
+
+
+
+//------------------------------------------------------------------------------
+//
+//    #popup
+//
+//------------------------------------------------------------------------------
+
+.popup
+	display: none
+	position: fixed
+	top: 0
+	left: 0
+	right: 0
+	bottom: 0
+	z-index: 1001
+	background: url('../img/overlay.png') 0 0
+	+vertical
+	&__in
+		display: inline-block
+		vertical-align: middle
+		position: relative
+		width: 400px
+		padding: 25px 40px
+		background: #FFF
+		border: 8px solid $green
+		text-align: center
+		+transform(translateY(200%))
+		+transition(0.4s ease-out)
+		opacity: 0
+		&.is-visible
+			+transform(translateY(0))
+			opacity: 1
+
+	.title
+		margin-bottom: 35px
+		font-size: 20px
+		line-height: 1.7
+		+ubuntu
+		color: #000
+
+	.btn
+		min-width: 175px
+		margin-top: 23px
+		font-size: 16px
+		+ubuntu
+
+	.ico_close
+		position: absolute
+		top: -35px
+		right: -35px
+		color: #6a6a6a
+		font-size: 13px
+		line-height: 1
+		cursor: pointer
+		padding: 10px
+		+tr-color
+		&:hover
+			color: $green

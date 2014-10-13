@@ -182,3 +182,39 @@ a
 	display: inline-block
 	position: relative
 	z-index: 2
+
+.parallax
+	.figure
+		display: block
+		position: absolute
+		z-index: -1
+		opacity: 1
+		+transform(translateY(0))
+		+transition(all 0.4s linear)
+		&1
+			top: -63px
+			left: -359px
+		&2
+			top: -230px
+			left: -274px
+		&3
+			top: -220px
+			left: 141px
+		&4
+			top: -215px
+			left: 486px
+		&5
+			top: -246px
+			right: -346px
+		&6
+			top: -15px
+			right: -352px
+	&.is-scroll-down
+		.figure
+			+transform(translateY(250%))
+			opacity: 0
+
+@for $i from 1 through 6
+	.parallax .figure#{$i}
+		+s(item#{$i})
+
