@@ -187,7 +187,7 @@ a { text-decoration: none; color: inherit; }
 .parallax .figure4 { top: 60px; right: 25.84507%; }
 .parallax .figure5 { top: 30px; right: 1.40845%; }
 .parallax .figure6 { top: 260px; right: 0.70423%; }
-.parallax.is-scroll-down .figure { -moz-transform: translateY(250%); -ms-transform: translateY(250%); -webkit-transform: translateY(250%); transform: translateY(250%); opacity: 0; }
+.parallax.is-scroll-down .figure { -moz-transform: translateY(200%); -ms-transform: translateY(200%); -webkit-transform: translateY(200%); transform: translateY(200%); opacity: 0; }
 
 .parallax .figure1 { background: url('../img/icons-s7180d6afee.png') 0 -894px no-repeat; width: 156px; height: 156px; }
 
