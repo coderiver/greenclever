@@ -134,6 +134,7 @@ a
 	// background-attachment: fixed
 	&_first
 		background-image: url('../img/slide1.jpg')
+		position: relative
 	&_second
 		background-image: url('../img/slide2.jpg')
 	&_last
@@ -142,6 +143,8 @@ a
 			position: relative
 			z-index: 1
 			padding-bottom: 100px
+			+rh(750)
+				padding-bottom: 70px
 			&:before
 				content: ""
 				position: absolute
@@ -149,13 +152,13 @@ a
 				top: 0
 				left: 0
 				right: 0
-				bottom: 40%
+				bottom: 48%
 				background: rgba(255,255,255,0.88)
 			&:after
 				content: ""
 				position: absolute
 				z-index: 1
-				top: 60%
+				top: 52%
 				left: 0
 				right: 0
 				bottom: 0
@@ -184,31 +187,39 @@ a
 	z-index: 2
 
 .parallax
+	position: absolute
+	z-index: 1
+	top: 85px
+	left: 0
+	right: 0
+	max-width: 1420px
+	margin: auto
+	+rh(750)
+		top: 40px
 	.figure
 		display: block
 		position: absolute
-		z-index: -1
 		opacity: 1
 		+transform(translateY(0))
-		+transition(all 0.4s linear)
+		+transition(all 0.8s linear)
 		&1
-			top: -63px
-			left: -359px
+			top: 215px
+			left: percentage(10/1420)
 		&2
-			top: -230px
-			left: -274px
+			top: 46px
+			left: percentage(89/1420)
 		&3
-			top: -220px
-			left: 141px
+			top: 54px
+			left: percentage(503/1420)
 		&4
-			top: -215px
-			left: 486px
+			top: 60px
+			right: percentage(367/1420)
 		&5
-			top: -246px
-			right: -346px
+			top: 30px
+			right: percentage(20/1420)
 		&6
-			top: -15px
-			right: -352px
+			top: 260px
+			right: percentage(10/1420)
 	&.is-scroll-down
 		.figure
 			+transform(translateY(250%))

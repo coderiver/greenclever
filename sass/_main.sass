@@ -137,10 +137,17 @@
 		font-size: 78px
 		line-height: 1
 		color: #FFF
+		+rh(800)
+			font-size: 50px
 	&_big
 		font-size: 36px
 		line-height: 1.3
 		color: #FFF
+
+.container_first
+	.title_lead
+		+rh(800)
+			text-shadow: 0 0 10px #000
 
 .lead-text
 	max-width: 660px
@@ -150,6 +157,8 @@
 	font-size: 22px
 	line-height: 1.3
 	color: #FFF
+	+rh(800)
+		margin: 25px auto
 	&_has-back
 		position: relative
 		padding: 50px 40px 40px
@@ -263,6 +272,8 @@
 	right: 0
 	background: $header
 	+clr
+	+rh(750)
+		height: 65px
 
 .logo
 	display: block
@@ -296,6 +307,13 @@
 		+svg(logo, 162, 48)
 		+r(1500)
 			left: -25px
+	+rh(750)
+		height: 65px
+		line-height: 65px
+		&:before
+			right: 30px
+		i
+			top: -3px
 
 .header__nav
 	float: left
@@ -331,6 +349,8 @@
 			+tr-color
 			+r(1500)
 				font-size: 16px
+			+rh(750)
+				line-height: 65px
 			&:hover
 				color: #FFF
 				&:before
@@ -363,6 +383,8 @@
 	+r(1330)
 		.btn
 			display: none
+	+rh(750)
+		line-height: 65px
 
 .header__tel
 	display: inline-block
@@ -410,6 +432,13 @@
 		line-height: 23px
 		&.is-active
 			color: #747474
+	+rh(750)
+		padding: 0
+		a
+			line-height: 18px
+		&:before
+			left: -9px
+			right: -9px
 
 
 
@@ -428,6 +457,7 @@
 	left: 0
 	right: 0
 	padding: 25px 70px
+	box-sizing: border-box
 	background: $header
 	+segoe
 	color: #818081
@@ -441,6 +471,8 @@
 		right: 0
 		top: auto
 		min-width: 1150px
+	+rh(750)
+		padding: 10px 70px
 
 .footer__right
 	float: right
@@ -640,6 +672,8 @@
 .carousel-wrap
 	overflow: hidden
 	margin: 50px 0
+	+rh(800)
+		margin: 30px 0 20px
 
 .carousel
 	width: 100%
@@ -661,6 +695,10 @@
 .info
 	margin-top: 70px
 	+clr
+	+rh(930)
+		margin-top: 30px
+	+rh(850)
+		display: none
 	&__arrow
 		position: relative
 		display: block
@@ -746,8 +784,13 @@
 	margin-top: 85px
 	text-align: center
 	overflow: hidden
+	+rh(750)
+		margin-top: 65px
 	&_fixed-footer
 		padding-bottom: 100px
+		+rh(750)
+			padding-bottom: 70px
+
 
 .toparea
 	background-image: url('../img/toparea.png')
@@ -1144,10 +1187,14 @@
 	+transform(translateX(-50%) translateY(-50%))
 	&:before
 		content: ""
-		display: inline-block
-		vertical-align: middle
+		// display: inline-block
+		// vertical-align: middle
+		position: absolute
+		top: 50%
+		left: 50%
 		width: 10px
 		height: 10px
+		margin: -5px 0 0 -5px
 		background: $green
 		border-radius: 50%
 	&:after
